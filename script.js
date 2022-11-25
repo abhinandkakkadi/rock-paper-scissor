@@ -3,7 +3,66 @@ function getComputerChoice()
 {
     const choice = ["rock" , "paper" , "scissor"];
     let computerSelection = choice[Math.floor(Math.random() * choice.length)];
-    console.log(computerSelection);
+    
+    return computerSelection;
 }
 
 getComputerChoice();
+
+function round(computerSelection,playerSelection)
+{
+   if(playerSelection === 'rock')
+   {
+     if(computerSelection === 'rock')
+     {
+        console.log(`Tie both are ${computerSelection}`);
+     }
+     if(computerSelection === 'scissor')
+     {
+        console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+     }
+     if(computerSelection === 'paper')
+     {
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+     }
+   }
+
+
+   if(playerSelection === 'scissor')
+   {
+     if(computerSelection === 'rock')
+     {
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+     }
+     if(computerSelection === 'scissor')
+     {
+        console.log(`Tie both are ${computerSelection}`)
+     }
+     if(computerSelection === 'paper')
+     {
+        console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+     }
+   }
+
+
+   if(playerSelection === 'paper')
+   {
+     if(computerSelection === 'rock')
+     {
+        console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+     }
+     if(computerSelection === 'scissor')
+     {
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+     }
+     if(computerSelection === 'paper')
+     {
+        console.log(`Tie both are ${computerSelection}`)
+     }
+   }
+
+   
+   
+}
+
+round(getComputerChoice(),'rock');
