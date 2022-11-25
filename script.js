@@ -67,12 +67,13 @@ function round(computerSelection,playerSelection)
 
 function game()
 {
-    for( let i=0; i< 5; i++)
+    for( let i=1; i<= 5; i++)
     {
         console.log(`Round ${i}`);
-        const input = prompt("enter rock paper or scissor");
-        let userChoice = input.toLowerCase();
+        const userChoice = prompt("enter rock paper or scissor");
+        
         console.log(userChoice);
-        getComputerChoice(computerSelection(),userChoice)
+        round(getComputerChoice(),userChoice);
     }
 }
+game();
