@@ -65,4 +65,14 @@ function round(computerSelection,playerSelection)
    
 }
 
-round(getComputerChoice(),'rock');
+function game()
+{
+    for( let i=0; i< 5; i++)
+    {
+        console.log(`Round ${i}`);
+        const input = prompt("enter rock paper or scissor");
+        let userChoice = input.toLowerCase();
+        console.log(userChoice);
+        getComputerChoice(computerSelection(),userChoice)
+    }
+}
