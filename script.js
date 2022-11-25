@@ -16,64 +16,26 @@ function round(computerSelection,playerSelection)
 {   
 
    
-   if(playerSelection === 'rock')
-   {
-     if(computerSelection === 'rock')
+   if(playerSelection === 'rock' && computerSelection === 'scissor' || playerSelection === 'scissor' && computerSelection === 'paper'
+      || playerSelection === 'paper' && computerSelection === 'rock' )
+      {
+        console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+        userPoints+=1;
+      }
+   if(playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'scissor' && computerSelection === 'rock'
+      || playerSelection === 'paper' &&  computerSelection === 'scissor' )
      {
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+        compPoints+=1;
+     }
+
+   if( playerSelection === 'rock' && computerSelection === 'rock' || playerSelection === 'scissor' && computerSelection === 'scissor'||
+       playerSelection === 'paper' && computerSelection === 'paper' )
+    {
         console.log(`Tie both are ${computerSelection}`);
-     }
-     if(computerSelection === 'scissor')
-     {
-        console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-        userPoints+=1;
-     }
-     if(computerSelection === 'paper')
-     {
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
-        compPoints+=1;
-     }
-   }
-
-
-   if(playerSelection === 'scissor')
-   {
-     if(computerSelection === 'rock')
-     {
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
-        compPoints+=1;
-     }
-     if(computerSelection === 'scissor')
-     {
-        console.log(`Tie both are ${computerSelection}`)
-     }
-     if(computerSelection === 'paper')
-     {
-        console.log(`You win! ${playerSelection} beats ${computerSelection}`)
-        userPoints+=1;
-     }
-   }
-
-
-   if(playerSelection === 'paper')
-   {
-     if(computerSelection === 'rock')
-     {
-        console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-        userPoints+=1;
-     }
-     if(computerSelection === 'scissor')
-     {
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
-        compPoints+=1;
-     }
-     if(computerSelection === 'paper')
-     {
-        console.log(`Tie both are ${computerSelection}`)
-     }
-   }
-
-   
-   
+    }
+  
+  
 }
 
 function game()
@@ -92,7 +54,7 @@ function game()
         }
         if(compPoints == 5)
         {
-            console.log("You lose");
+            console.log("You lose the whole round");
             break;
         }
     }
