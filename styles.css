@@ -42,3 +42,18 @@ button{
 button:hover{
     background-color: bisque;
 }
+
+#round{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: xx-large;
+}
+
+.btn{
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+}

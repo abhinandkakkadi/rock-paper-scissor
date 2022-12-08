@@ -5,6 +5,7 @@ let userPoints = 0;
 const result = document.getElementById('demo');
 
 
+
 function getComputerChoice()
 {
     const choice = ["rock" , "paper" , "scissor"];
@@ -27,6 +28,8 @@ function round(computerSelection,playerSelection)
         if(userPoints== 5)
         {   document.body.style.backgroundColor = 'red'
             document.getElementById('round').innerHTML = "You win the whole round";
+            userPoints = 0;
+            compPoints = 0;
             
             
         }
@@ -39,6 +42,8 @@ function round(computerSelection,playerSelection)
         if(compPoints == 5)
         {   document.body.style.backgroundColor = 'green'
             document.getElementById('round').innerHTML ="You lose the whole round";
+            userPoints = 0;
+            compPoints = 0;
             
         }
      }
@@ -67,6 +72,11 @@ function round(computerSelection,playerSelection)
                 round(getComputerChoice(),scissor.innerHTML)
             })
        
+            document.getElementById('clear').addEventListener('click',function(){
+                document.getElementById('round').innerHTML = "";
+                
+            
+            })
         
     
  
